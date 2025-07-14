@@ -1,0 +1,9 @@
+- [ ] Crear estructura base de la landing (`index.html`, `styles.css`, `scripts.js`)
+- [x] Implementar hero con textos y CTA de WhatsApp (completado)
+- [x] Incluir imagen del candidato posicionada a la derecha en desktop y arriba en mobile (completado)
+- [x] Barra de navegación fija abajo en desktop y arriba en mobile, con menú colapsable (completado)
+- [x] Hacer la paleta de colores y tipografías según diseño (#0057FF, negro, blanco) (completado)
+- [x] Agregar breakpoints principales ( ≤768 px y ≥769 px ) (completado)
+- [ ] Optimizar para accesibilidad (contraste, etiquetas alt, roles ARIA)
+- [ ] Verificar compatibilidad cross-browser
+- [ ] Desplegar en GitHub Pages / Vercel cuando esté listo 

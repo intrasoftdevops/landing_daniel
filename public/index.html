@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Quintero</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/LogoDQ.png" type="image/png" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="nav-bar" role="banner">
+    <div class="nav-bar__content">
+      <a href="#" class="logo" aria-label="Ir a inicio">
+        <img src="assets/LogoDQ.png" alt="Logo DQ" class="logo__image" />
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li><a href="#historia">Conóceme</a></li>
+          <li><a href="#defineo">Lo que creo</a></li>
+          <li><a href="#contacto">Haz parte del cambio</a></li>
+          <li><a href="#reset">Reset a la Política</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón fijo opcional -->
+      <a href="#contribuye" class="btn--primary">Contribuye</a>
+
+      <div class="social">
+        <a href="https://www.facebook.com/DQuinteroCalle" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoFacebook.png" alt="Facebook" class="social__icon" />
+        </a>
+        <a href="https://www.instagram.com/quinterocalle/?hl=es" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoInstagram.png" alt="Instagram" class="social__icon" />
+        </a>
+        <a href="https://www.tiktok.com/@quinterocalle?lang=es" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoTikTok.png" alt="TikTok" class="social__icon" />
+        </a>
+        <a href="https://x.com/QuinteroCalle?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoX.png" alt="Twitter" class="social__icon" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección principal (Hero) -->
+  <main class="hero" role="main">
+    <img src="assets/PixelFondoIzquierda.png" alt="Pixel Fondo Izquierda" class="hero__pixel--left" />
+    <section class="hero__content">
+      <h1 class="hero__title">
+        <img src="assets/LogoDanielQuintero.png" alt="Logo Daniel Quintero" class="hero__image--logo" />
+      </h1>
+      <h2 class="hero__claim">Únete a nuestra<br/>campaña por Colombia</h2>
+
+      <a
+        href="https://wa.me/573189826259"
+        class="cta cta--whatsapp"
+        aria-label="Regístrate vía WhatsApp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="assets/wa_registrate.png" alt="Regístrate vía WhatsApp" class="cta__image" />
+      </a>
+
+      <p class="hero__disclaimer">
+        Al registrarte, aceptas recibir mensajes de texto y llamadas automáticas con información sobre esta campaña y posibles solicitudes de apoyo.
+No es necesario hacer una compra para participar.
+Consulta nuestros Términos de servicio y Política de privacidad.
+      </p>
+    </section>
+
+    <figure class="hero__figure">
+      <img
+        src="assets/daniel_quintero.png"
+        alt="Daniel Quintero levantando el puño"
+        class="hero__image"
+      />
+    </figure>
+    <img src="assets/PixelFondoIDerecho.png" alt="Pixel Fondo Derecho" class="hero__pixel--right" />
+  </main>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

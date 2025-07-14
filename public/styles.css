@@ -1,0 +1,458 @@
+/* =====================
+   Variables y resets
+   ===================== */
+:root {
+  --blue: #0032FD;
+  --black: #000000;
+  --white: #ffffff;
+  --yellow: #ffef00;
+  --font-main: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importar fuentes Space Grotesk */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('static/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('static/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Space Grotesk', var(--font-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--blue); /* Restaurar fondo azul */
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.menu-open {
+  overflow-y: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   Hero
+   ===================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Mantener dos columnas */
+  gap: 0.25rem; /* Reducir al mínimo el espacio entre columnas */
+  align-items: center;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+  position: relative;
+  overflow: visible;
+  padding-top: 1rem; /* Reducir espacio superior */
+  padding-bottom: 1rem; /* Reducir espacio inferior */
+  margin-bottom: 0; /* Alinear con la parte inferior */
+}
+
+.hero__content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-right: 0.25rem; /* Reducir al mínimo el margen derecho */
+}
+
+.hero__title {
+  font-size: clamp(3rem, 6vw, 5rem); /* Ajustar tamaño de fuente */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; /* Ajustar espaciado entre letras */
+  line-height: 1.1;
+}
+
+.hero__title--first {
+  display: block;
+  color: var(--white); /* Cambiar color a blanco */
+}
+
+.hero__title--last {
+  display: inline-block;
+  background: var(--black); /* Cambiar fondo a blanco */
+  color: var(--white); /* Cambiar texto a negro */
+  padding: 0.25em 0.8em;
+  border-radius: 9999px; /* cápsula completa */
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  letter-spacing: 2.0em; /* Aumentar espaciado entre letras */
+  color: var(--white); /* Cambiar color a blanco */
+  text-transform: uppercase; /* Transformar a mayúsculas */
+}
+
+.hero__claim {
+  font-size: 2rem; /* Aumentar tamaño de fuente */
+  text-align: center; /* Alinear al centro */
+  max-width: 540px;
+  margin: 0 auto 1.5rem auto; /* Centrar y agregar margen inferior */
+  color: #FDFD58; /* Asegurar color correcto */
+  font-family: 'Space Grotesk', sans-serif; /* Aplicar fuente */
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  color: var(--black);
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+.cta i {
+  font-size: 1.4rem;
+  color: #25d366;
+}
+
+.hero__disclaimer {
+  font-size: 0.75rem;
+  text-align: left; /* Alinear al centro */
+  margin: 1rem auto; /* Centrar y agregar margen superior */
+  max-width: 440px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Space Grotesk'; /* Aplicar fuente */
+}
+
+.hero__figure {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: flex-end; /* empuja la imagen hacia el borde derecho */
+  overflow: visible;
+  margin-bottom: 0; /* Eliminar margen inferior */
+  margin-left: 0.25rem; /* Reducir al mínimo el margen izquierdo */
+}
+
+.hero__image {
+  width: auto;
+  max-height: 90vh; /* no superar el 90% de la altura visible */
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.hero__image--logo { /* Aumentar altura de la imagen */
+  width: auto;
+  display: inline-block;
+}
+
+.hero__pixel--left {
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Cambiar para que comience desde el navbar */
+  transform: none; /* Eliminar transformación vertical */
+  width: 38%; /* Ajustar tamaño si es necesario */
+  height: auto;
+  z-index: -1;
+  left: -297px;
+}
+
+.hero__pixel--right {
+  position: absolute;
+  right: 0;
+  top: 0; /* Ajustar verticalmente */
+  height: auto;
+  z-index: -1;
+}
+
+/* Extra-large pantallas – agrandamos aún más */
+@media (min-width: 1600px) {
+  /* Eliminamos escala extra gigante en pantallas muy grandes */
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    grid-template-columns: 380px 1fr;
+  }
+
+  .hero__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-bottom: 6rem;
+  }
+
+  .hero__figure {
+    order: -1;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .hero__content {
+    margin-inline: auto;
+  }
+
+  .hero__image {
+    max-height: 60vh;
+    max-width: 380px;
+  }
+
+  .nav-bar {
+    top: 0;
+    bottom: auto; /* evita estirar hasta abajo */
+    height: auto;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 30;
+  }
+
+  .nav {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--blue);
+    z-index: 20;
+  }
+
+  .nav.open {
+    display: flex; /* Mostrar cuando esté abierto */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .btn--primary {
+    display: none;
+  }
+
+  .nav {
+    background: var(--blue); /* Cambiar fondo a azul */
+  }
+
+  .nav {
+    position: absolute; /* Cambiar a absoluto para no cubrir todo */
+    height: auto; /* Ajustar altura */
+    max-height: 80vh; /* Limitar altura máxima */
+    overflow-y: auto; /* Permitir desplazamiento si es necesario */
+  }
+
+  .hero__pixel--left,
+  .hero__pixel--right {
+    width: 25%; /* Ajustar para pantallas más pequeñas */
+  }
+}
+
+/* =====================
+   Navegación
+   ===================== */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 1.5rem; /* Aumentar padding para mayor altura */
+  z-index: 10;
+  height: 110px; /* Cambiar altura del navbar */
+}
+
+.nav-bar__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo__text {
+  font-weight: 900;
+  font-size: 1.5rem;
+  background: var(--white);
+  color: var(--black);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+
+.logo__image {
+  height: 40px; /* Ajustar altura de la imagen */
+  width: auto;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  flex: 1;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav__list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem; /* Aumentar tamaño de fuente */
+  transition: color 0.2s ease;
+}
+
+.nav__list a:hover {
+  color: var(--yellow);
+}
+
+.btn--primary {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn--primary:hover {
+  opacity: 0.85;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social__icon {
+  width: 34px; /* Aumentar tamaño */
+  height: 34px;
+  transition: transform 0.2s ease;
+}
+
+.social__icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .social__icon {
+    width: 24px; /* Aumentar tamaño para pantallas pequeñas */
+    height: 24px;
+  }
+}
+
+/* =====================
+   CTA con imagen WhatsApp
+   ===================== */
+.cta--whatsapp {
+  background: none; /* Eliminar imagen de fondo */
+  padding: 0; /* Eliminar padding */
+}
+
+.cta--whatsapp:hover {
+  transform: scale(1.05);
+}
+
+.cta--whatsapp .cta__text {
+  white-space: nowrap;
+}
+
+.cta__icon {
+  height: 24px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.cta__image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--white); 
+  font-family: 'Space Grotesk', sans-serif; 
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.not-found .btn--primary {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.not-found .btn--primary:hover {
+  opacity: 0.85;
+}
