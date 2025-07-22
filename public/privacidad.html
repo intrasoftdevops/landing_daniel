@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de privacidad de INTRASOFT S.A.S. sobre el tratamiento y protección de datos personales conforme a la ley colombiana.">
+  <title>Política de Privacidad - INTRASOFT S.A.S.</title>
+  <link rel="icon" href="assets/LogoDQ.png" type="image/png" />
+  <style>
+    /* Reset y variables */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --blue: #0032FD;
+      --yellow: #ffef00;
+      --white: #ffffff;
+      --black: #000000;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--blue);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Navbar - Igual que en index.html */
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: var(--black);
+      color: var(--white);
+      padding: 1rem 1.5rem;
+      z-index: 10;
+      height: 110px;
+    }
+
+    .nav-bar__content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      text-decoration: none;
+    }
+
+    .logo__image {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav {
+      flex: 1;
+    }
+
+    .nav__list {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav__list a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav__list a:hover {
+      color: var(--yellow);
+    }
+
+    .btn--primary {
+      background: var(--yellow);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn--primary:hover {
+      opacity: 0.85;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social__icon {
+      width: 34px;
+      height: 34px;
+      transition: transform 0.2s ease;
+    }
+
+    .social__icon:hover {
+      transform: scale(1.1);
+    }
+    
+    /* Contenido principal */
+         .container {
+       max-width: 900px;
+       margin: 2rem auto;
+       margin-bottom: 130px; /* Espacio para el navbar fijo */
+       background: var(--white);
+       border-radius: 12px;
+       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+       overflow: hidden;
+     }
+    
+    .content {
+      padding: 3rem;
+      color: #333;
+      line-height: 1.7;
+    }
+    
+    h1 {
+      color: var(--blue);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      border-bottom: 4px solid var(--yellow);
+      padding-bottom: 1rem;
+    }
+    
+    h2 {
+      color: var(--blue);
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    h3 {
+      color: #2c3e50;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      font-size: 1rem;
+    }
+    
+    ul {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+    
+    section {
+      margin-bottom: 2.5rem;
+    }
+    
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    strong {
+      color: var(--blue);
+      font-weight: 700;
+    }
+    
+         /* Responsive */
+     @media (max-width: 768px) {
+       .nav-bar {
+         top: 0;
+         bottom: auto;
+         height: auto;
+       }
+
+       .nav-toggle {
+         display: block;
+         position: relative;
+         z-index: 30;
+       }
+
+       .nav {
+         display: none;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         background: var(--blue);
+         z-index: 20;
+       }
+
+       .nav.open {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: auto;
+         max-height: 80vh;
+         overflow-y: auto;
+       }
+
+       .nav__list {
+         flex-direction: column;
+         gap: 2rem;
+         padding: 0;
+       }
+
+       .btn--primary {
+         display: none;
+       }
+
+       .social__icon {
+         width: 24px;
+         height: 24px;
+       }
+       
+       .container {
+         margin: 1rem;
+         margin-bottom: 120px; /* Espacio para el navbar */
+         border-radius: 8px;
+       }
+       
+       .content {
+         padding: 2rem 1.5rem;
+       }
+       
+       h1 {
+         font-size: 2rem;
+       }
+       
+       h2 {
+         font-size: 1.3rem;
+       }
+       
+       h3 {
+         font-size: 1.1rem;
+       }
+     }
+     
+     @media (max-width: 480px) {
+       .content {
+         padding: 1.5rem 1rem;
+       }
+       
+       h1 {
+         font-size: 1.7rem;
+       }
+       
+       ul {
+         padding-left: 1.5rem;
+       }
+     }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="nav-bar" role="banner">
+    <div class="nav-bar__content">
+      <a href="/" class="logo" aria-label="Ir a inicio">
+        <img src="assets/LogoDQ.png" alt="Logo DQ" class="logo__image" />
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/privacidad">Política de Privacidad</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón fijo opcional -->
+      <a href="#contribuye" class="btn--primary">Contribuye</a>
+
+      <div class="social">
+        <a href="https://www.facebook.com/DQuinteroCalle" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoFacebook.png" alt="Facebook" class="social__icon" />
+        </a>
+        <a href="https://www.instagram.com/quinterocalle/?hl=es" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoInstagram.png" alt="Instagram" class="social__icon" />
+        </a>
+        <a href="https://www.tiktok.com/@quinterocalle?lang=es" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoTikTok.png" alt="TikTok" class="social__icon" />
+        </a>
+        <a href="https://x.com/QuinteroCalle?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social_media/IconoX.png" alt="Twitter" class="social__icon" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="content">
+      <h1>POLÍTICAS DE PRIVACIDAD</h1>
+      
+      <section>
+        <p>De acuerdo con la Ley de Protección de Datos Personales 1581 de 2012 y el Decreto 1377 de 2013 de Habeas Data, es importante que el usuario tenga conocimiento de lo siguiente:</p>
+      </section>
+
+      <section>
+        <h2>FINALIDAD Y TRATAMIENTO DE DATOS</h2>
+        <p>Al aceptar los términos y condiciones legales, usted autoriza de manera previa, expresa e informada a <strong>INTRASOFT S.A.S.</strong>, sus filiales y vinculadas, para que sus datos personales puedan ser almacenados y usados con los siguientes fines:</p>
+        <ul>
+          <li>Comunicación durante trámites o actividades.</li>
+          <li>Información sobre productos, servicios, ofertas, promociones, alianzas, estudios, concursos y contenidos.</li>
+          <li>Tratamiento conforme a la Ley 1581 de 2012 y sus Decretos Reglamentarios.</li>
+          <li>Tratamiento con base en el contrato de transmisión de datos personales.</li>
+        </ul>
+        <p>La información no será transferida fuera de las bases de datos salvo que:</p>
+        <ul>
+          <li>El usuario autorice expresamente.</li>
+          <li>Sea necesario para la prestación de servicios por parte de contratistas o terceros.</li>
+          <li>Sea utilizada con fines comerciales, marketing conjunto, fusiones, adquisiciones, reestructuraciones o por mandato legal.</li>
+        </ul>
+        <p>Puede ejercer sus derechos a través del correo electrónico: <a href="mailto:intrasoftdevops@gmail.com">intrasoftdevops@gmail.com</a></p>
+      </section>
+
+      <section>
+        <h2>FINALIDADES ESPECÍFICAS</h2>
+        <ul>
+          <li>Enviar comunicaciones sobre eventos, capacitaciones y actividades.</li>
+          <li>Entregar información a terceros con fines comerciales relacionados al comercio electrónico e internet.</li>
+          <li>Enviar contenidos publicitarios y promocionales propios o de terceros.</li>
+          <li>Actualizar y mantener vigente la información en nuestras bases de datos.</li>
+          <li>Realizar estudios de mercado, definir perfiles de usuario y ejecutar campañas de publicidad.</li>
+          <li>Gestionar contenidos editoriales y medios digitales.</li>
+          <li>Registrar entrada y salida de documentos físicos o digitales.</li>
+          <li>Usar con fines científicos, estadísticos e históricos.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>DERECHOS, DEBERES Y PROCEDIMIENTOS</h2>
+        <h3>Derechos de los titulares de los datos:</h3>
+        <ul>
+          <li>Acceso libre a sus datos.</li>
+          <li>Conocer, actualizar y rectificar su información personal.</li>
+          <li>Ser informado sobre el uso dado a sus datos.</li>
+          <li>Revocar la autorización o solicitar la eliminación de los datos.</li>
+          <li>Presentar quejas o acciones según la Ley 1581 de 2012.</li>
+          <li>Conocer la política de privacidad y sus modificaciones.</li>
+        </ul>
+
+        <h3>Deberes de INTRASOFT S.A.S.:</h3>
+        <ul>
+          <li>Informar sobre los derechos de los usuarios.</li>
+          <li>Tramitar consultas y reclamos.</li>
+          <li>Usar datos únicamente con autorización.</li>
+          <li>Respetar condiciones de seguridad y confidencialidad.</li>
+          <li>Cumplir instrucciones legales y normativas vigentes.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>CONDICIONES GENERALES</h2>
+        <h3>Seguridad:</h3>
+        <p>Aplicamos estándares y políticas para preservar la integridad, disponibilidad y confidencialidad de la información en cualquier formato y medio.</p>
+        <p>Los contratos con terceros incluyen cláusulas de confidencialidad.</p>
+
+        <h3>Fuentes de la información personal:</h3>
+        <p>Puede incluir: nombre, correo electrónico, dirección, empresa, intereses, información bancaria, preferencias, entre otros.</p>
+        <p>Solo se utiliza para mejorar su experiencia, facilitar el acceso a servicios o enviar información relevante.</p>
+      </section>
+
+      <section>
+        <h2>COOKIES Y TECNOLOGÍAS DE RASTREO</h2>
+        <p>El uso de cookies permite recordar preferencias del usuario, agilizar el acceso y mejorar la experiencia. Las cookies deben estar habilitadas para usar el portal.</p>
+        <p>También se utiliza tecnología clickstream para análisis del uso del sitio.</p>
+      </section>
+
+      <section>
+        <h2>USOS DE LA INFORMACIÓN</h2>
+        <ul>
+          <li>Procesar pedidos, servicios e información.</li>
+          <li>Confirmación y seguimiento de órdenes.</li>
+          <li>Entrega e instalación de productos.</li>
+          <li>Administrar programas de lealtad.</li>
+          <li>Servicio al cliente y promociones.</li>
+          <li>Encuestas y análisis.</li>
+          <li>Investigación de mercado.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>TRATAMIENTO DE DATOS DE TERCEROS</h2>
+        <p>Si proporciona datos de terceros, estos solo serán utilizados para la finalidad que fueron entregados, como envío de comunicaciones, contacto en caso de mora, etc.</p>
+      </section>
+
+      <section>
+        <h2>DATOS DE PAGO</h2>
+        <p>Los pagos realizados a través de enlaces externos son responsabilidad de la entidad financiera correspondiente. INTRASOFT S.A.S. no almacena ni solicita datos financieros durante el registro, solo al momento de realizar compras, bajo estándares de seguridad de pasarelas de pago como PagosOnline.</p>
+      </section>
+
+      <section>
+        <h2>RESPONSABILIDAD DEL USUARIO</h2>
+        <p>El usuario debe proporcionar información veraz y actualizarla cuando sea necesario. También es responsable de reportar pérdida o robo de instrumentos financieros a las entidades correspondientes.</p>
+        <p>Se prohíbe usar el portal con fines ilegales, difamatorios o que puedan afectar a terceros o a la empresa.</p>
+      </section>
+
+      <section>
+        <h2>TRATAMIENTO DE DATOS DE MENORES</h2>
+        <p>Solo se recopilan datos de menores con autorización expresa de padres o tutores, y solo para fines relacionados con los servicios ofrecidos.</p>
+      </section>
+
+      <section>
+        <h2>DATOS SENSIBLES</h2>
+        <p>El usuario no está obligado a suministrar datos sensibles. Estos incluyen: origen racial, convicciones religiosas, políticas, datos biométricos, entre otros.</p>
+      </section>
+
+      <section>
+        <h2>ELECCIONES DEL USUARIO</h2>
+        <p>Puede optar por no recibir más comunicaciones de marketing mediante:</p>
+        <ul>
+          <li>Seguir las instrucciones de exclusión en correos.</li>
+          <li>Llamar al +5713553185.</li>
+          <li>Escribir a <a href="mailto:intrasoftdevops@gmail.com">intrasoftdevops@gmail.com</a>.</li>
+          <li>Enviar una carta a Cr 4 69 45 Oficina 101, Bogotá.</li>
+        </ul>
+        <p>El proceso puede tomar hasta 30 días hábiles.</p>
+      </section>
+
+      <section>
+        <h2>VIGENCIA DE LA POLÍTICA</h2>
+        <p>La presente política entra en vigor desde su publicación y podrá ser modificada con previo aviso. Las bases de datos estarán vigentes por el tiempo necesario para cumplir su finalidad o el exigido por ley.</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

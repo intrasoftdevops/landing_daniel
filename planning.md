@@ -4,6 +4,9 @@
 - [x] Barra de navegación fija abajo en desktop y arriba en mobile, con menú colapsable (completado)
 - [x] Hacer la paleta de colores y tipografías según diseño (#0057FF, negro, blanco) (completado)
 - [x] Agregar breakpoints principales ( ≤768 px y ≥769 px ) (completado)
+- [x] Crear página de política de privacidad (/privacidad) para Intrasoft SA (completado)
+- [x] Configurar servidor para servir página de privacidad correctamente (completado)
+- [x] Implementar diseño responsive para política de privacidad manteniendo marca (completado)
 - [ ] Optimizar para accesibilidad (contraste, etiquetas alt, roles ARIA)
 - [ ] Verificar compatibilidad cross-browser
 - [ ] Desplegar en GitHub Pages / Vercel cuando esté listo 

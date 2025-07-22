@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/privacidad', (req, res) => {
+  res.sendFile(__dirname + '/public/privacidad.html');
+});
+
 app.use((req, res) => {
   res.status(404).sendFile(__dirname + '/public/404.html');
 });
