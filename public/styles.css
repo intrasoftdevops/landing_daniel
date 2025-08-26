@@ -392,9 +392,8 @@ img {
 }
 
 @media (max-width: 768px) {
-  .social__icon {
-    width: 24px; /* Aumentar tamaño para pantallas pequeñas */
-    height: 24px;
+  .btn--primary {
+    display: inline-block; /* volver a mostrar */
   }
 }
 
